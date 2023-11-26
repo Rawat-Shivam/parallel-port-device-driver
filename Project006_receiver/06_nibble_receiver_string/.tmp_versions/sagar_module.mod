@@ -1,0 +1,3 @@
+/home/sourabh/Emblogic_lab/Project006_parallel_port/Project006_receiver/06_nibble_receiver_string/sagar_module.ko
+/home/sourabh/Emblogic_lab/Project006_parallel_port/Project006_receiver/06_nibble_receiver_string/initfs.o /home/sourabh/Emblogic_lab/Project006_parallel_port/Project006_receiver/06_nibble_receiver_string/cleanup.o /home/sourabh/Emblogic_lab/Project006_parallel_port/Project006_receiver/06_nibble_receiver_string/openDev.o /home/sourabh/Emblogic_lab/Project006_parallel_port/Project006_receiver/06_nibble_receiver_string/readDev.o /home/sourabh/Emblogic_lab/Project006_parallel_port/Project006_receiver/06_nibble_receiver_string/releaseDev.o
+

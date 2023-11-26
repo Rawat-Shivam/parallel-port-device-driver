@@ -1,0 +1,3 @@
+/home/sourabh/Emblogic_lab/Project006_parallel_port/Project006_sender/01_led_glow/sagar_module.ko
+/home/sourabh/Emblogic_lab/Project006_parallel_port/Project006_sender/01_led_glow/initfs.o /home/sourabh/Emblogic_lab/Project006_parallel_port/Project006_sender/01_led_glow/cleanup.o /home/sourabh/Emblogic_lab/Project006_parallel_port/Project006_sender/01_led_glow/openDev.o /home/sourabh/Emblogic_lab/Project006_parallel_port/Project006_sender/01_led_glow/trimDev.o /home/sourabh/Emblogic_lab/Project006_parallel_port/Project006_sender/01_led_glow/writeDev.o /home/sourabh/Emblogic_lab/Project006_parallel_port/Project006_sender/01_led_glow/createSkull.o /home/sourabh/Emblogic_lab/Project006_parallel_port/Project006_sender/01_led_glow/releaseDev.o
+

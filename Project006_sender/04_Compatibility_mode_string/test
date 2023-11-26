@@ -1,0 +1,112 @@
+#! /bin/bash
+
+
+runApp()
+{
+	read -n1 -s -p "Do you wanna runApp(y/N)?"
+	if [ $REPLY = 'y' ]
+	then
+		./App_run	# running app
+	fi
+}
+
+BuildApp()
+{
+	read -n1 -s -p "Do you wanna build App(y/N)?"
+	if [ $REPLY = 'y' ]
+	then
+		mknod MyDev c $majorno 0
+		echo "mknod--->$?"
+		ls -al -i
+		read
+#		./App/testApp
+#		runApp 		# calling runApp()
+		
+		echo "..... Hold the script and run app in another terminal ...... "
+		read
+	fi
+}
+
+Insert()
+{
+	read -n1 -p "Make successfull .Do you wanna Insert Module(y/N)?" reply
+	if [ $reply = 'y' ]
+	then
+		dmesg -C
+		insmod ./module/sagar_module.ko nodev=10 noofReg=3 Regsize=1
+		if [ $? -ne 0 ] 	# checking whether insmod executed successfully or not 
+		then
+			echo "...........Error: insmod fails.........."
+			echo
+		else
+			read
+			lsmod | head -10
+			read
+			cat /proc/ioports | head -20	# to display all available ports on system
+			read
+			dmesg
+			read
+			cat /proc/devices | head -40
+			read -p "Enter majorno: " majorno
+			BuildApp	# calling BuildApp()
+		fi
+	fi
+}
+
+BuildMod()
+{
+	read -n1 -s -p "Do you wanna build Module(y/N)?"
+	if [ $REPLY = 'y' ]
+	then
+		if make
+		then
+			Insert	# calling Insert()
+		else
+			echo "Make file failed "
+		fi
+	fi
+}
+
+
+RemoveMod()
+{
+	read -n1 -p "Do you wanna remove Module(y/N)?"
+	if [ $REPLY = 'y' ]
+	then
+		unlink MyDev
+		ls -al
+		rmmod sagar_module
+		if [ $? -eq 0 ]		# checking whether rmmod executed successfully or not 
+		then
+			read
+			lsmod | head -10
+			read
+			cat /proc/ioports | head -20	# to display all available ports on system
+			read
+			dmesg
+			read
+			cat /proc/devices | head -40
+			read
+			else
+				echo ".........Error: rmmod fails........."
+		fi
+	fi	
+}
+
+editFurther()
+{
+	echo
+	read -n1 -s -p "Do you wanna develop further (y/N)?"
+	if [ $REPLY = 'y' ]
+	then
+		for file in $(ls *.c,v) `ls *.h,v`
+		do
+			co -l $file
+		done
+		fi
+}
+
+BuildMod  	
+RemoveMod	
+#editFurther
+

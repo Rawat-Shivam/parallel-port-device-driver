@@ -1,0 +1,3 @@
+/home/sourabh/Emblogic_lab/Project006_parallel_port/Project006_sender/02_Byte_sender/sagar_module.ko
+/home/sourabh/Emblogic_lab/Project006_parallel_port/Project006_sender/02_Byte_sender/initfs.o /home/sourabh/Emblogic_lab/Project006_parallel_port/Project006_sender/02_Byte_sender/cleanup.o /home/sourabh/Emblogic_lab/Project006_parallel_port/Project006_sender/02_Byte_sender/openDev.o /home/sourabh/Emblogic_lab/Project006_parallel_port/Project006_sender/02_Byte_sender/trimDev.o /home/sourabh/Emblogic_lab/Project006_parallel_port/Project006_sender/02_Byte_sender/writeDev.o /home/sourabh/Emblogic_lab/Project006_parallel_port/Project006_sender/02_Byte_sender/createSkull.o /home/sourabh/Emblogic_lab/Project006_parallel_port/Project006_sender/02_Byte_sender/releaseDev.o
+

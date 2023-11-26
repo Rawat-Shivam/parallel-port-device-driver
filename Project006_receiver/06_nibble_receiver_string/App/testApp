@@ -1,0 +1,46 @@
+#! /bin/bash
+
+#for file in `ls ./App/*.c ./App/*.h`
+#do
+#	ci $file
+#done
+
+# since make command itself extract *.c *.h file from *.c,v *.h,v 
+# with read permission only so no need to check out files without lock
+#
+#for file in $(ls *.c,v) `ls *.h,v`
+#do
+#	co $file
+#done
+
+if make -C ./App	# running makefile from parent directory 
+then
+	mv ./App/App_run .
+else
+	read
+	echo "...........App failed............"
+fi
+
+
+#for file in $(ls ./App/*.c,v  ./App/*.h,v)
+#do
+#	co -l $file
+#done
+
+# moving file from driver directory to app directory whenever 
+# filename in 2 directory matches
+#
+#for driver_ls in `ls *.c *.h`
+#do
+#	for app_ls in $(ls ./App/*.c ./App/*.h)
+#	do
+#		if [ $driver_ls = $(basename $app_ls) ]
+#		then
+#			mv $driver_ls ./App
+#			break	
+#		fi
+#	done
+#done
+
+
+rm ./App/*.o
